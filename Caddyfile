@@ -1,0 +1,9 @@
+{$SITE_HOST:localhost} {
+    tls internal
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+        Referrer-Policy no-referrer
+    }
+    reverse_proxy frontend:3000
+}
